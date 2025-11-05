@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10b981" />
+  <meta name="description" content="Green Market - Fresh Farm Products Direct to Your Door. Buy organic fruits, vegetables, dairy and more from local farmers." />
+  <meta name="keywords" content="organic, farm, fresh, vegetables, fruits, dairy, green market" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!-- Preconnect to API -->
+  <link rel="preconnect" href="http://localhost:5000" />
+  
+  <title>Green Market - Fresh Farm Products</title>
+  
+  <style>
+    /* Prevent FOUC (Flash of Unstyled Content) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #root {
+      min-height: 100vh;
+    }
+    
+    /* Loading spinner */
+    .initial-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: white;
+    }
+    
+    .initial-loader h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  
+  <!-- Initial Loading Screen -->
+  <div id="initial-loader" class="initial-loader">
+    <h1>🌱 Green Market</h1>
+    <div class="spinner"></div>
+    <p style="margin-top: 1rem;">Loading fresh products...</p>
+  </div>
+  
+  <!-- React Root -->
+  <div id="root"></div>
+  
+  <script>
+    // Remove loader when React app loads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.5s';
+          setTimeout(function() {
+            loader.remove();
+          }, 500);
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
