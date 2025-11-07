@@ -16,7 +16,7 @@ function ProductCard({ product, onAddToCart }) {
       <Link to={`/product/${product.product_id}`} style={{textDecoration: 'none', color: 'inherit'}}>
         <div className="product-image-wrapper">
           {product.image_url ? (
-            <img src={`http://localhost:5000${product.image_url}`} alt={product.name} className="product-image-real" />
+            <img src={product.image_url} alt={product.product_name || product.name} className="product-image-real" />
           ) : (
             <div className="product-image">
               {getProductEmoji(product.category_name)}
@@ -28,7 +28,7 @@ function ProductCard({ product, onAddToCart }) {
         </div>
         <div className="product-info">
           <div className="product-category">{product.category_name}</div>
-          <h3 className="product-name">{product.name}</h3>
+          <h3 className="product-name">{product.product_name || product.name}</h3>
           <p className="product-description">{product.description}</p>
           <div className="product-footer">
             <span className="product-price">₹{product.price}/{product.unit}</span>

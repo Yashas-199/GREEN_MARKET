@@ -228,7 +228,7 @@ INSERT INTO products (farmer_id, product_name, category_id, description, price, 
 (4, 'Shimla Apples', 2, 'Sweet Shimla apples, premium quality', 120.00, 70, 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6', 'kg', TRUE),
 (4, 'Bananas', 2, 'Ripe yellow bananas, rich in potassium', 40.00, 150, 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e', 'dozen', TRUE),
 (6, 'Mangoes', 2, 'Sweet Alphonso mangoes, king of fruits', 150.00, 60, 'https://images.unsplash.com/photo-1601493700631-2b16ec4b4716', 'kg', TRUE),
-(4, 'papaya', 2, 'Juicy and fresh papaya, vitamin C rich', 80.00, 100, 'https://unsplash.com/photos/a-group-of-sliced-papaya-on-a-yellow-background-yqJ3GUrnq7s', 'kg', TRUE),
+(4, 'Papaya', 2, 'Juicy and fresh papaya, vitamin C rich', 80.00, 100, 'https://images.unsplash.com/photo-1617112848923-cc2234396a8d', 'kg', TRUE),
 (6, 'Pomegranates', 2, 'Fresh pomegranates, full of antioxidants', 140.00, 50, 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7', 'kg', TRUE),
 (4, 'Grapes', 2, 'Sweet seedless grapes', 90.00, 80, 'https://images.unsplash.com/photo-1599819177442-d2a7dc3c03c7', 'kg', TRUE),
 
